@@ -1,0 +1,72 @@
+#version : '3'
+#services:
+#  jenkins:
+#    build:
+#      context: /home/shopclues
+#      dockerfile: jdk-8-maven-dockerfile    
+#    ports:
+#      - "9090:8080"
+#    container_name: my-yamlfile-jenkins-maven-container
+#    networks:
+#      - jenkins-maven-network
+#    volumes:
+#      - jenkins-maven-volume:/var/jenkins_home
+
+#networks:
+#  jenkins-maven-network:
+#    name: jenkins-maven-network
+#volumes:
+#  jenkins-maven-volume:
+#    name: jenkins-maven-volume
+
+
+
+
+
+
+
+version: '3'
+services:
+  jenkins:
+    build:
+      context: /path_to_your_file
+      dockerfile: dockerfile
+    ports:
+      - "9090:8080"
+    container_name: my-yamlfile-jenkins-maven-container
+    networks:
+      - jenkins-maven-network
+    volumes:
+      - jenkins-maven-volume:/var/jenkins_home
+
+networks:
+  jenkins-maven-network:
+    name: jenkins-maven-network
+
+volumes:
+  jenkins-maven-volume:
+    name: jenkins-maven-volume
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
